@@ -1,0 +1,28 @@
+{
+    "utilisateur": [
+        {
+            "signup": {
+                "name": "bbbb",
+                "birthdate": {
+                    "day": "20",
+                    "month": "April",
+                    "year": "2000"
+                },
+                "mobileNumber": "0605041718",
+                "email": "aaaa@aaa.aa",
+                "password": "XXXyyyZZZ01@",
+                "firstName": "cccc",
+                "lastName": "bbbb",
+                "address": {
+                    "streetAddress": "1735 Rue Saint-Patrick",
+                    "country": "Canada",
+                    "state": "Québec",
+                    "city": "Montréal",
+                    "zipcode": "H3K 3G9"
+                },
+                "newsletter": true,
+                "agreement": true
+            }
+        }
+    ]
+}
