@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+ 
+    stages {
+        stage('Checkout') {
+            steps {
+                // Étape pour récupérer le code depuis le dépôt Git
+                git credentialsId: 'githubtoken', url: 'https://github.com/A-KHADIR/playwright_formation.git', branch: 'main'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                // Étape pour installer les dépendances du projet avec npm
+                bat 'npm install'
+                bat 'npx playwright install'// Utilisation de 'bat' pour exécuter des commandes Windows
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                // Étape pour exécuter les tests automatisés avec Playwright et Cucumber
+                bat 'npx playwright test --project="chromium" --headed' // Utilisation de 'bat' pour exécuter des commandes Windows
+               
+
+            }
+        }
+    }
+}
